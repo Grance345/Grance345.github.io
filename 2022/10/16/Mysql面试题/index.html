@@ -187,7 +187,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-10-16 22:09:41</span>
+        <span class="pc">2022-10-17 10:32:57</span>
     </span>
     
     
@@ -240,8 +240,7 @@
 
         <div class="article-content markdown-body">
             <h3 id="MySQL的复制原理以及流程"><a href="#MySQL的复制原理以及流程" class="headerlink" title="MySQL的复制原理以及流程"></a><strong>MySQL的复制原理以及流程</strong></h3><p>​	主：binlog线程——记录下所有改变了数据库数据的语句，放进master上的binlog中；</p>
-<pre><code> 从：io线程——在使用start slave 之后，负责从master上拉取 binlog 内容，放进 自己的relay log中；
-</code></pre>
+<p>​	从：io线程——在使用start slave 之后，负责从master上拉取 binlog 内容，放进 自己的relay log中；</p>
 <p>​	从：sql执行线程——执行relay log中的语句；</p>
 <h3 id="存储引擎相关"><a href="#存储引擎相关" class="headerlink" title="存储引擎相关"></a>存储引擎相关</h3><h4 id="简述MyISAM和InnoDB的区别"><a href="#简述MyISAM和InnoDB的区别" class="headerlink" title="简述MyISAM和InnoDB的区别"></a><strong>简述MyISAM和InnoDB的区别</strong></h4><p>​	MyISAM：不支持事务；支持表锁；支持全文索引；count()有变量存	储，无需查全表；非聚簇索引</p>
 <p>​    InnoDB：支持事务；支持行级锁；聚簇索引；</p>
